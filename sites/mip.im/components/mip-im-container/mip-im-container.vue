@@ -146,7 +146,6 @@ export default {
       })
       socket.addEventListener('message', (info) => {
         let data = JSON.parse(info.data)
-        console.log(data)
         let event = new CustomEvent(data.method, {detail: data})
         socket.dispatchEvent(event)
       })
