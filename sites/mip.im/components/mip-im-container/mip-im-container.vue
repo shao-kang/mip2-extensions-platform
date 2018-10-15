@@ -180,7 +180,7 @@ export default {
       socket.addEventListener('onRecvMsg', (e) => {
         let data = e.detail.data
         let length = this.imList.length
-        data.msgList.map((item) => {
+        data.msgList && data.msgList.map((item) => {
           // 去重
           let copy = false
           for (let i = 0; i < length; i++) {
